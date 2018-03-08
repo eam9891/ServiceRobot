@@ -1,0 +1,210 @@
+.sys-info {
+    font-family: "Trebuchet MS", serif;
+    color: turquoise;
+
+}
+.green {
+    color: #15c82f;
+}
+.sys-info-bottom {
+    text-align: center;
+    font-size: 14px;
+    color: #15c82f;
+    margin: auto;
+}
+
+/*------------------------------------------------------------*/
+/*                           NET INFO                         */
+/*------------------------------------------------------------*/
+
+#net-info {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#net-info td, #net-info th {
+    border: none;
+    padding: 10px;
+}
+
+#net-info tr:nth-child(even){background-color: inherit;}
+
+#net-info tr:hover {background-color: #6d6d6d;}
+
+#net-info th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    color: #9b9b9b;
+}
+
+/*------------------------------------------------------------*/
+/*                           DISK INFO                        */
+/*------------------------------------------------------------*/
+
+.disk-meter {
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.disk-legend { list-style: none; }
+.disk-legend li, p {
+    font-family: "Trebuchet MS", serif;
+    margin: 10px;
+    font-size: 20px;
+}
+.disk-legend span {
+    border: 1px solid #ccc;
+    float: left;
+    width: 12px;
+    height: 12px;
+    margin: 2px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+.disk-legend .percent { background-color: #ad5741; }
+.disk-legend .background { background-color: #808080; }
+.disk-progress {
+    stroke: #ad5741;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+.disk-progress-text {
+    position: absolute;
+    float: left;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: #ad5741;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+.disk-progress-background {
+    stroke: #808080;
+}
+.disk-progress-value {
+    stroke-dasharray: 339.292;
+    stroke-dashoffset: 339.292;
+
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-name: disk-progress;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+
+    /* Standard syntax */
+    animation-name: disk-progress;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards
+
+}
+
+
+/*------------------------------------------------------------*/
+/*                           CPU INFO                         */
+/*------------------------------------------------------------*/
+.cpu-meter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.cpu-progress {
+    stroke: #15c82f;
+}
+.cpu-progress-2 {
+    stroke: #15c82f;
+}
+.cpu-progress-3 {
+    stroke: #15c82f;
+}
+.cpu-progress-text {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: #15c82f;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 150%;
+    z-index: 9999;
+}
+.cpu-progress-background {
+    stroke: #808080;
+}
+.cpu-progress-value {
+    stroke-dasharray: 339.292;
+    stroke-dashoffset: 339.292;
+
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-name: disk-progress;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+
+    /* Standard syntax */
+    animation-name: disk-progress;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards
+
+}
+
+
+
+/*------------------------------------------------------------*/
+/*                           RAM INFO                         */
+/*------------------------------------------------------------*/
+
+.memory-progress {
+    height: 1.5em;
+    width: 100%;
+    background-color: #808080;
+    position: relative;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+.memory-progress:before {
+    content: attr(data-label);
+    font-size: 0.8em;
+    position: absolute;
+    text-align: center;
+    top: 5px;
+    left: 0;
+    right: 0;
+}
+.memory-progress .value {
+    background-color: #15c82f;
+    display: inline-block;
+    height: 100%;
+}

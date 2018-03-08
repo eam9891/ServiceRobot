@@ -1,0 +1,18 @@
+[Unit]
+Description=WebSocketSerialPort
+After=network.target
+
+[Service]
+WorkingDirectory=/var/www/html/server
+ExecStart=/usr/bin/node /var/www/html/server/serialsocket.js
+Restart=always
+ RestartSec=10
+StandardOutput=null
+StandardError=syslog
+SyslogIdentifier=scsr
+#User=root
+#Group=root
+Environment=NODE_ENV=production PORT=1337
+
+[Install]
+WantedBy=multi-user.target

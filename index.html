@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Service Robot</title>
+
+    <link href="booksearch.css" rel="stylesheet">
+
+    <!-- Latest Bootstrap 4.0 compiled and minified Font-Awesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Latest Bootstrap 4.0 compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0-beta.3/cyborg/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous">
+    </script>
+
+    <!-- Popper JS Custom Tooltips Library-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+
+    <!-- Latest compiled Bootstrap 4.0 JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+</head>
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark" style="margin-bottom: 15px;">
+    <!-- Header Name -->
+    <a class="navbar-brand" href="index.html">ServiceRobot</a>
+
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+
+            <!-- Login -->
+            <li class="nav-item">
+                <a class="nav-link" href="login/">
+                    Login <i class="fa fa-sign-in" aria-hidden="true"></i>
+                </a>
+            </li>
+            <!--
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            -->
+
+        </ul>
+    </div>
+</nav>
+<body>
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-md-10">
+
+            <!-- Search Card -->
+            <div class="card border-secondary mb-3">
+                <div class="card-header"><h4>Book Search</h4></div>
+                <div class="card-body">
+
+                    <p id="mic_info" style="text-align: center;">Click on the microphone icon and begin speaking.</p>
+
+                    <form>
+                        <div class="form-group form-group-lg">
+                            <div class="input-group input-group-lg">
+
+                                <!-- Search Input -->
+                                <input class="shuffle-search form-control ui-autocomplete-input" id="search" name="q" placeholder="Enter ISBN, Title, Author, Category etc." style="background-color: #353534; color: whitesmoke; border: 1px solid #2A9FD6;">
+
+                                <!-- Microphone Button -->
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-primary btn-lg" id="mic">
+                                        <i class="fa fa-microphone"></i>
+                                    </button>
+                                </span>
+
+                                <!-- Submit Form Button -->
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary btn-lg" type="button" name="button" style="cursor:pointer" id='clickMe'>
+                                        <span class="fa fa-search" aria-hidden="true"></span>
+                                    </button>
+                                </span>
+
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Search Results -->
+                    <div id="search-results"></div>
+
+                </div>
+            </div>
+            
+        </div>
+        <div class="col"></div>
+    </div>
+
+</div>
+<script src="booksearch.js"></script>
+</body>
+</html>
+

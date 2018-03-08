@@ -1,0 +1,115 @@
+/*========================================================
+          Book Section
+========================================================*/
+
+
+/* Disable text selection */
+html {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+/*styling book area*/
+.col-md-6 {
+    text-align: center;
+    margin: 15px auto 0;
+    height: 300px;
+    padding: 30px;
+}
+
+/*Book's title*/
+h3 {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    color: #313131;
+}
+
+/*Style book author text*/
+.author {
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+    font-weight: 400;
+}
+
+.book-image {
+    float: left;
+    width: 200px;
+    padding: 30px;
+    height: 250px;
+}
+
+.book-info {
+    float: right;
+    width: 40%;
+    text-align: left;
+    margin: 20px 10px;
+}
+
+/*Create background for the description area*/
+.book-info:after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    width: calc(70% - 5px);
+    height: calc(100% - 10px);
+    border-radius: 3px;
+    z-index: -1;
+    transition: all 250ms ease-out;
+    box-shadow: 0 1px 1px 1px rgba(210, 214, 213, 0.5);
+    background-color: #424241;
+}
+
+/*Change background when hover*/
+.book-info:hover:after  {
+    background-color: #60605f;
+    box-shadow: 0 1px 1px 1px rgba(210, 214, 213, 0.5);
+    cursor: pointer;
+}
+
+/*Description area; hide overflow*/
+.description {
+    font-size: 15px;
+    line-height: 1.4;
+    -webkit-box-orient: vertical;
+    overflow:hidden;
+    height: 150px;
+    padding: 5px 5px 10px 0;
+    text-overflow: ellipsis;
+}
+
+/*description area: show overflow scrollbar*/
+.description:hover, .description:active {
+    overflow: auto;
+}
+
+/*Style overflow scrollbar background*/
+.description::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+/*Style overflow scrollbar */
+.description::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+/*Change color of scrollbar thum*/
+.description::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #353534;
+}
+
+.price {
+    margin-top: 30px;
+    margin-right: 15px;
+    text-align: right;
+}
